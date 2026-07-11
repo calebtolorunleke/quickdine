@@ -1,16 +1,131 @@
-# React + Vite
+# QuickDine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuickDine is a modern restaurant discovery and food ordering frontend application built with React. The platform is designed to provide a responsive experience for browsing restaurants, viewing menus, managing bookings, and placing food orders.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Responsive desktop and mobile navigation
+* Restaurant discovery and search
+* User authentication interface
+* Role-based navigation for customers, owners, and administrators
+* Restaurant and menu browsing
+* Booking management
+* Shopping cart and checkout flow
+* Responsive design across screen sizes
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* React Router
+* Tailwind CSS
+* Lucide React
+* JavaScript
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+├── assets/
+├── components/
+├── data/
+├── pages/
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js
+* npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/calebtolorunleke/quickdine.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd quickdine
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will run on the local URL provided by Vite.
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+
+Starts the development server.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run preview
+```
+
+Previews the production build locally.
+
+```bash
+npm run lint
+```
+
+Checks the project for linting issues.
+
+## Current Status
+
+The project is currently under active development.
+
+Completed:
+
+* Initial React and Vite setup
+* Project folder structure
+* Responsive navbar
+* Desktop and mobile navigation
+* Mock user data
+* Conditional authentication interface
+* Role-based dashboard links
+
+## Planned Features
+
+* Restaurant listing page
+* Restaurant details and menu pages
+* Meal search and filtering
+* Shopping cart
+* Checkout workflow
+* Booking management
+* User authentication
+* Backend API integration
+* Owner and administrator dashboards
+
+## Repository
+
+Frontend repository for the QuickDine platform.
+
+## Author
+
+Caleb Adebayo
