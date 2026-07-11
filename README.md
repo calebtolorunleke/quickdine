@@ -4,23 +4,23 @@ QuickDine is a modern restaurant discovery and food ordering frontend applicatio
 
 ## Features
 
-* Responsive desktop and mobile navigation
-* Restaurant discovery and search
-* User authentication interface
-* Role-based navigation for customers, owners, and administrators
-* Restaurant and menu browsing
-* Booking management
-* Shopping cart and checkout flow
-* Responsive design across screen sizes
+- Responsive desktop and mobile navigation
+- Restaurant discovery and search
+- User authentication interface
+- Role-based navigation for customers, owners, and administrators
+- Restaurant and menu browsing
+- Booking management
+- Shopping cart and checkout flow
+- Responsive design across screen sizes
 
 ## Tech Stack
 
-* React
-* Vite
-* React Router
-* Tailwind CSS
-* Lucide React
-* JavaScript
+- React
+- Vite
+- React Router
+- Tailwind CSS
+- Lucide React
+- JavaScript
 
 ## Project Structure
 
@@ -39,8 +39,8 @@ src/
 
 ### Prerequisites
 
-* Node.js
-* npm
+- Node.js
+- npm
 
 ### Installation
 
@@ -102,25 +102,25 @@ The project is currently under active development.
 
 Completed:
 
-* Initial React and Vite setup
-* Project folder structure
-* Responsive navbar
-* Desktop and mobile navigation
-* Mock user data
-* Conditional authentication interface
-* Role-based dashboard links
+- Initial React and Vite setup
+- Project folder structure
+- Responsive navbar
+- Desktop and mobile navigation
+- Mock user data
+- Conditional authentication interface
+- Role-based dashboard links
 
 ## Planned Features
 
-* Restaurant listing page
-* Restaurant details and menu pages
-* Meal search and filtering
-* Shopping cart
-* Checkout workflow
-* Booking management
-* User authentication
-* Backend API integration
-* Owner and administrator dashboards
+- Restaurant listing page
+- Restaurant details and menu pages
+- Meal search and filtering
+- Shopping cart
+- Checkout workflow
+- Booking management
+- User authentication
+- Backend API integration
+- Owner and administrator dashboards
 
 ## Repository
 
