@@ -4,7 +4,7 @@ import LogoImage from "../assets/logo.svg";
 import user from "../data/user";
 import { LayoutDashboard, LogOut, Menu, ShieldCheck, X } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ setAuthModalOpen }) => {
   const [scrolled, setScrolled] = useState(false);
   const [dropDownOpen, setDropDownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -114,10 +114,12 @@ const Navbar = () => {
           ) : (
             <>
               <button
+                onClick={() => setAuthModalOpen(true)}
                 className={`text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-black/55 hover:text-black/55" : "text-black/80 hover:text-white"}`}
               >
                 Sign In
               </button>
+              onClick={() => setAuthModalOpen(true)}
               <button
                 className={`text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-black/55 hover:text-black/55" : "text-black/80 hover:text-white"}`}
               >
