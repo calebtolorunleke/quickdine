@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import LogoImage from "../assets/logo.svg";
 import user from "../data/user";
 import { LayoutDashboard, LogOut, Menu, ShieldCheck, X } from "lucide-react";
 
@@ -7,6 +8,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [dropDownOpen, setDropDownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,9 +29,9 @@ const Navbar = () => {
         <div className="flex items-center gap-12">
           <Link to="/">
             <img
-              src="/logo.svg"
+              src={LogoImage}
               alt="Logo"
-              className={`h-8.5 ${scrolled || (location.pathname === "/" && "invert")}`}
+              className={`h-8.5 ${scrolled || (location.pathname === "/" && "ivert")}`}
             />
           </Link>
 
@@ -41,13 +44,13 @@ const Navbar = () => {
             </Link>
             <Link
               to="/search"
-              className={`test-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer ${location.pathname.startsWith("/search") ? "text-amber-800 border-amber-800" : scrolled || location.pathname !== "/search" ? "text-black/55 hover:black/55 " : "text-white/80 hover:text-white"}`}
+              className={`text-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer ${location.pathname.startsWith("/search") ? "text-amber-800 border-amber-800" : scrolled || location.pathname !== "/search" ? "text-black/55 hover:black/55 " : "text-white/80 hover:text-white"}`}
             >
               Restaurants
             </Link>
 
             <button
-              className={`test-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer ${location.pathname.startsWith("/dashboard") ? "text-amber-800 border-amber-800" : scrolled || location.pathname !== "/dashboard" ? "text-black/55 hover:black/55 " : "text-white/80 hover:text-white"}`}
+              className={`text-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer ${location.pathname.startsWith("/dashboard") ? "text-amber-800 border-amber-800" : scrolled || location.pathname !== "/dashboard" ? "text-black/55 hover:black/55 " : "text-white/80 hover:text-white"}`}
             >
               My Bookings
             </button>
@@ -59,7 +62,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setDropDownOpen(!dropDownOpen)}
-                className={`flex items-ceneter gap-2 text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "test-black" : "text-black"}`}
+                className={`flex items-center gap-2 text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "test-black" : "text-black"}`}
               >
                 <span className="size-7 rounded-full bg-black/20 border flex items-center justify-center text-xs uppercase">
                   {user.name.charAt(0)}
@@ -76,7 +79,7 @@ const Navbar = () => {
                       {user.name}
                     </p>
                     <p className="text-sm text-black/55 truncate">
-                      {user.name}
+                      {user.email}
                     </p>
                   </div>
                   <button className="w-full flex items-center gap-3 px-4 py-2.5 text-xs text-black/55 hover:text-black/55 hover:bg-surface transition-colors cursor-pointer text-left">
@@ -147,7 +150,7 @@ const Navbar = () => {
             Discover
           </Link>
           <Link
-            to="/"
+            to="/search"
             className="text-base text-on-surface hover:text-black/55"
           >
             Restaurants
@@ -158,7 +161,54 @@ const Navbar = () => {
 
           <div className="border-t border-[#c4c7c7]/10 my-2"></div>
 
-          {user ? <div className="flex flex-col"></div> : <div></div>}
+          {user ? (
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <span className="w-10 h-10 rounded-full bg-black/20 flex items-center justify-center text-[#775a19] text-sm uppercase">
+                  {user.name.charAt(0)}
+                </span>
+                <div>
+                  <p className="text-sm text-black">{user.name}</p>
+                  <p className="text-xs text-black/55">{user.email}</p>
+                </div>
+              </div>
+              <Link
+                to="/dashboard"
+                className="text-sm font-medium text-black/55 hover:text-black"
+              >
+                My Bookings
+              </Link>
+              {user.role === "admin" && (
+                <Link
+                  to="/admin/dashboard"
+                  className="text-sm font-medium text-black/55 hover:text-black"
+                >
+                  Admin Console
+                </Link>
+              )}
+
+              {user.role === "owner" && (
+                <Link
+                  to="/owner/dashboard"
+                  className="text-sm font-medium text-black/55 hover:text-black"
+                >
+                  Owner Console
+                </Link>
+              )}
+              <button className=" text-sm text-red-700 text-left  cursor-pointer font-medium">
+                Sign Out
+              </button>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-3">
+              <button className="w-full border border-[#c4c7c7]/50 text-center py-3 text-sm font-medium hover:border-black cursor-pointer">
+                Sign In
+              </button>
+              <button className="w-full bg-black text-white tracking-widest uppercase border-[#c4c7c7]/50 text-center py-3 text-sm font-medium hover:border-black cursor-pointer">
+                Sign Up
+              </button>
+            </div>
+          )}
         </div>
       )}
     </nav>
