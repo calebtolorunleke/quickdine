@@ -12,6 +12,9 @@ const Home = () => {
         isOpen={isAuthModalOpen}
         onClose={() => setAuthModalOpen(false)}
       />
+      <main>
+        
+      </main>
     </div>
   );
 };
