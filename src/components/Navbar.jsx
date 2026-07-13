@@ -62,7 +62,7 @@ const Navbar = ({ setAuthModalOpen }) => {
             <div className="relative">
               <button
                 onClick={() => setDropDownOpen(!dropDownOpen)}
-                className={`flex items-center gap-2 text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "test-black" : "text-black"}`}
+                className={`flex items-center gap-2 text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-black" : "text-black"}`}
               >
                 <span className="size-7 rounded-full bg-black/20 border flex items-center justify-center text-xs uppercase">
                   {user.name.charAt(0)}
@@ -147,17 +147,22 @@ const Navbar = ({ setAuthModalOpen }) => {
         <div className="md:hidden fixed inset-x-0 top-16 bg-white border-b border-[#c4c7c7]/10 py-6 px-6 z-50 ambient-shadow flex flex-col gap-5 animate-in slide-in-from-top duration-300">
           <Link
             to="/"
+            onClick={() => setMobileMenuOpen(false)}
             className="text-base text-on-surface hover:text-black/55"
           >
             Discover
           </Link>
           <Link
+            onClick={() => setMobileMenuOpen(false)}
             to="/search"
             className="text-base text-on-surface hover:text-black/55"
           >
             Restaurants
           </Link>
-          <button className="text-base text-on-surface hover:text-black/55 text-left cursor-pointer">
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-base text-on-surface hover:text-black/55 text-left cursor-pointer"
+          >
             Reservations
           </button>
 
@@ -203,10 +208,16 @@ const Navbar = ({ setAuthModalOpen }) => {
             </div>
           ) : (
             <div className="flex flex-col gap-3">
-              <button className="w-full border border-[#c4c7c7]/50 text-center py-3 text-sm font-medium hover:border-black cursor-pointer">
+              <button
+                onClick={() => setAuthModalOpen(true)}
+                className="w-full border border-[#c4c7c7]/50 text-center py-3 text-sm font-medium hover:border-black cursor-pointer"
+              >
                 Sign In
               </button>
-              <button className="w-full bg-black text-white tracking-widest uppercase border-[#c4c7c7]/50 text-center py-3 text-sm font-medium hover:border-black cursor-pointer">
+              <button
+                onClick={() => setAuthModalOpen(true)}
+                className="w-full bg-black text-white tracking-widest uppercase border-[#c4c7c7]/50 text-center py-3 text-sm font-medium hover:border-black cursor-pointer"
+              >
                 Sign Up
               </button>
             </div>
