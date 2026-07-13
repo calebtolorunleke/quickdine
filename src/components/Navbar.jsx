@@ -119,8 +119,8 @@ const Navbar = ({ setAuthModalOpen }) => {
               >
                 Sign In
               </button>
-              onClick={() => setAuthModalOpen(true)}
               <button
+                onClick={() => setAuthModalOpen(true)}
                 className={`text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-black/55 hover:text-black/55" : "text-black/80 hover:text-white"}`}
               >
                 Sign Up

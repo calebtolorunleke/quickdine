@@ -6,11 +6,11 @@ const Home = () => {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-#f9f9f9 flex flex-col pt-0">
+    <div className="min-h-screen bg-[#f9f9f9] flex flex-col pt-0">
       <Navbar setAuthModalOpen={setAuthModalOpen} />
       <AuthModal
         isOpen={isAuthModalOpen}
-        onclose={() => setAuthModalOpen(false)}
+        onClose={() => setAuthModalOpen(false)}
       />
     </div>
   );
