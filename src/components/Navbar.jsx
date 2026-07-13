@@ -23,7 +23,7 @@ const Navbar = ({ setAuthModalOpen }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md h-16 shadow-sm border-b border-outline-variant/10" : "bg-transparent h-20 border-b border-transparent"}`}
+      className={`fixed top-0 w-full z-40 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md h-16 shadow-sm border-b border-[#c4c7c7]/10" : "bg-transparent h-20 border-b border-transparent"}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center h-full px-6 md:px-10">
         <div className="flex items-center gap-12">
@@ -31,26 +31,26 @@ const Navbar = ({ setAuthModalOpen }) => {
             <img
               src={LogoImage}
               alt="Logo"
-              className={`h-8.5 ${scrolled || (location.pathname === "/" && "ivert")}`}
+              className={`h-8.5 ${scrolled || (location.pathname === "/" && "invert")}`}
             />
           </Link>
 
           <div className="hidden md:flex gap-8 items-center">
             <Link
               to="/"
-              className={`text-sm transition-colors pb-1 border-b-2 cursor-pointer ${location.pathname === "/" ? (scrolled ? "text-amber-800 border-amber-800" : "text-black --this to be white border-black") : "text-black/55 hover:text-amber-800 border-transparent"}`}
+              className={`text-sm transition-colors pb-1 border-b-2 cursor-pointer ${location.pathname === "/" ? (scrolled ? "text-amber-800 border-amber-800" : "text-white border-white") : "text-black/55 hover:text-amber-800 border-transparent"}`}
             >
               Discover
             </Link>
             <Link
               to="/search"
-              className={`text-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer ${location.pathname.startsWith("/search") ? "text-amber-800 border-amber-800" : scrolled || location.pathname !== "/search" ? "text-black/55 hover:black/55 " : "text-white/80 hover:text-white"}`}
+              className={`text-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer ${location.pathname.startsWith("/search") ? "text-amber-800 border-amber-800" : scrolled || location.pathname !== "/" ? "text-black/55 hover:black/55 " : "text-white/80 hover:text-white"}`}
             >
               Restaurants
             </Link>
 
             <button
-              className={`text-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer ${location.pathname.startsWith("/dashboard") ? "text-amber-800 border-amber-800" : scrolled || location.pathname !== "/dashboard" ? "text-black/55 hover:black/55 " : "text-white/80 hover:text-white"}`}
+              className={`text-sm transition-colors pb-1 border-b-2 border-transparent cursor-pointer ${location.pathname.startsWith("/dashboard") ? "text-amber-800 border-amber-800" : scrolled || location.pathname !== "/" ? "text-black/55 hover:black/55 " : "text-white/80 hover:text-white"}`}
             >
               My Bookings
             </button>
@@ -62,7 +62,7 @@ const Navbar = ({ setAuthModalOpen }) => {
             <div className="relative">
               <button
                 onClick={() => setDropDownOpen(!dropDownOpen)}
-                className={`flex items-center gap-2 text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-black" : "text-black"}`}
+                className={`flex items-center gap-2 text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-[#fed488]" : "text-white"}`}
               >
                 <span className="size-7 rounded-full bg-black/20 border flex items-center justify-center text-xs uppercase">
                   {user.name.charAt(0)}
@@ -115,7 +115,7 @@ const Navbar = ({ setAuthModalOpen }) => {
             <>
               <button
                 onClick={() => setAuthModalOpen(true)}
-                className={`text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-black/55 hover:text-black/55" : "text-black/80 hover:text-white"}`}
+                className={`text-sm transition-colors cursor-pointer ${scrolled || location.pathname !== "/" ? "text-black/55 hover:text-black/55" : "text-white hover:text-white"}`}
               >
                 Sign In
               </button>

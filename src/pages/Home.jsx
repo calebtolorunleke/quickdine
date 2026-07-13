@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import AuthModal from "../components/AuthModal";
+import Hero from "../components/Home/Hero";
 
 const Home = () => {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
@@ -13,7 +14,7 @@ const Home = () => {
         onClose={() => setAuthModalOpen(false)}
       />
       <main>
-        
+        <Hero />
       </main>
     </div>
   );
