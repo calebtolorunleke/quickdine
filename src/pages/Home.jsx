@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import AuthModal from "../components/AuthModal";
 import Hero from "../components/Home/Hero";
+import CuisineBrowse from "../components/Home/CuisineBrowse";
 
 const Home = () => {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
@@ -15,6 +16,7 @@ const Home = () => {
       />
       <main>
         <Hero />
+        <CuisineBrowse/>
       </main>
     </div>
   );

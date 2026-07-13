@@ -121,7 +121,7 @@ const Navbar = ({ setAuthModalOpen }) => {
               </button>
               <button
                 onClick={() => setAuthModalOpen(true)}
-                className={`text-sm font-medium tracking-wider uppercase px-5 py-2.5 transition-soft cursor-pointer ${scrolled || location.pathname !== "/" ? "bg-black text-black/55 hover:text-black/55" : "bg-black text-white hover:text-white"}`}
+                className={`text-sm font-medium tracking-wider uppercase px-5 py-2.5 transition-soft cursor-pointer ${scrolled || location.pathname !== "/" ? "bg-black text-white hover:text-white" : "bg-white text-black/55 hover:text-black/55"}`}
               >
                 Sign Up
               </button>
