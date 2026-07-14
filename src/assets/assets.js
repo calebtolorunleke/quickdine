@@ -10,6 +10,7 @@ import {
   UtensilsCrossedIcon,
 } from "lucide-react";
 
+
 import restaurant1 from "../../public/restaurant_1.png";
 import restaurant2 from "../../public/restaurant_2.jpg";
 import restaurant3 from "../../public/restaurant_3.jpg";
@@ -41,7 +42,7 @@ export const restaurants = [
     image: restaurant1,
     availableSlots: ["17:30", "18:00", "19:00", "20:30"],
     featured: true,
-    exclusive: false,
+    exclusive: true,
   },
   {
     _id: "2",

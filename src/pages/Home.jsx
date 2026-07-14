@@ -4,6 +4,7 @@ import AuthModal from "../components/AuthModal";
 import Hero from "../components/Home/Hero";
 import CuisineBrowse from "../components/Home/CuisineBrowse";
 import TrendingRow from "../components/Home/TrendingRow";
+import Membership from "../components/Home/Membership";
 
 const Home = () => {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
@@ -19,6 +20,7 @@ const Home = () => {
         <Hero />
         <CuisineBrowse/>
         <TrendingRow/>
+        <Membership/>
       </main>
     </div>
   );
