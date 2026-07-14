@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import AuthModal from "../components/AuthModal";
 import Hero from "../components/Home/Hero";
 import CuisineBrowse from "../components/Home/CuisineBrowse";
+import TrendingRow from "../components/Home/TrendingRow";
 
 const Home = () => {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
@@ -17,6 +18,7 @@ const Home = () => {
       <main>
         <Hero />
         <CuisineBrowse/>
+        <TrendingRow/>
       </main>
     </div>
   );
