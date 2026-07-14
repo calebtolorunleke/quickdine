@@ -5,6 +5,7 @@ import Hero from "../components/Home/Hero";
 import CuisineBrowse from "../components/Home/CuisineBrowse";
 import TrendingRow from "../components/Home/TrendingRow";
 import Membership from "../components/Home/Membership";
+import NewsletterCTA from "../components/Home/NewsletterCTA";
 
 const Home = () => {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
@@ -21,6 +22,7 @@ const Home = () => {
         <CuisineBrowse/>
         <TrendingRow/>
         <Membership/>
+        <NewsletterCTA/>
       </main>
     </div>
   );
