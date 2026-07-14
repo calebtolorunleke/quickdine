@@ -10,6 +10,15 @@ import {
   UtensilsCrossedIcon,
 } from "lucide-react";
 
+import restaurant1 from "../../public/restaurant_1.png";
+import restaurant2 from "../../public/restaurant_2.jpg";
+import restaurant3 from "../../public/restaurant_3.jpg";
+import restaurant4 from "../../public/restaurant_4.png";
+// import restaurant5 from "../../public/restaurant_5.png";
+// import restaurant6 from "../../public/restaurant_6.png";
+// import restaurant7 from "../../public/restaurant_7.png";
+// import restaurant8 from "../../public/restaurant_8.png";
+
 export const cuisines = [
   { name: "Italian", icon: UtensilsCrossedIcon, label: "ITALIAN" },
   { name: "Japanese", icon: FishIcon, label: "SUSHI" },
@@ -29,7 +38,7 @@ export const restaurants = [
     rating: 4.8,
     reviewCount: 124,
     location: "Vancouver, BC",
-    image: "/images/golden-table.jpg",
+    image: restaurant1,
     availableSlots: ["17:30", "18:00", "19:00", "20:30"],
     featured: true,
     exclusive: false,
@@ -43,11 +52,12 @@ export const restaurants = [
     rating: 4.6,
     reviewCount: 89,
     location: "Burnaby, BC",
-    image: "/images/sakura-dining.jpg",
+    image: restaurant2,
     availableSlots: ["16:30", "18:30", "21:00"],
     featured: false,
     exclusive: true,
-  },{
+  },
+  {
     _id: "3",
     name: "The Golden Table",
     slug: "the-golden-table",
@@ -56,7 +66,7 @@ export const restaurants = [
     rating: 4.8,
     reviewCount: 124,
     location: "Vancouver, BC",
-    image: "/images/golden-table.jpg",
+    image: restaurant3,
     availableSlots: ["17:30", "18:00", "19:00", "20:30"],
     featured: true,
     exclusive: false,
@@ -70,7 +80,7 @@ export const restaurants = [
     rating: 4.6,
     reviewCount: 89,
     location: "Burnaby, BC",
-    image: "/images/sakura-dining.jpg",
+    image: restaurant4,
     availableSlots: ["16:30", "18:30", "21:00"],
     featured: false,
     exclusive: true,

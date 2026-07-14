@@ -7,8 +7,7 @@ const RestaurantCard = ({ restaurant }) => {
 
   return (
     <div
-      key={restaurant._id}
-      className="group relative bg-white border border-outline-variant/10 card-hover-effect overflow-hidden rounded-md flex flex-col h-full"
+      className="group relative bg-white border border-[#775a19]/10 card-hover-effect overflow-hidden rounded-md flex flex-col h-full"
     >
       <Link
         to={`/restaurant/${restaurant.slug}`}
@@ -25,13 +24,13 @@ const RestaurantCard = ({ restaurant }) => {
 
         <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
           {restaurant.exclusive && (
-            <span className="text-[9px] font-medium tracking-widest text-white bg-secondary py-1 px-2.5 uppercase">
+            <span className="text-[9px] font-medium tracking-widest text-white bg-[#8C6A12] py-1 px-2.5 uppercase">
               EXCLUSIVE
             </span>
           )}
 
           {restaurant.featured && (
-            <span className="text-[9px] font-medium tracking-widest text-on-primary bg-primary py-1 px-2.5 uppercase">
+            <span className="text-[9px] font-medium tracking-widest text-white bg-black py-1 px-2.5 uppercase">
               RECOMMENDED
             </span>
           )}
@@ -75,7 +74,7 @@ const RestaurantCard = ({ restaurant }) => {
         </div>
 
         <div>
-          <div className="border-t border-outline-variant/10 my-3" />
+          <div className="border-t border-[#775a19]/10 my-3" />
 
           <span className="block text-[9px] font-medium text-black/55 tracking-wider uppercase mb-2">
             QUICK RESERVATION
@@ -100,7 +99,7 @@ const RestaurantCard = ({ restaurant }) => {
                 <button
                   key={slot}
                   type="button"
-                  className="text-[10px] font-medium border border-outline-variant/60 hover:border-primary px-3 py-1.5 transition-colors cursor-pointer text-black/55 hover:text-primary bg-surface"
+                  className="text-[10px] font-medium border border-[#775a19]/20 hover:border-primary px-3 py-1.5 transition-colors cursor-pointer text-black/55 hover:text-black bg-[#775a19]/10"
                 >
                   {slot}
                 </button>
@@ -108,7 +107,7 @@ const RestaurantCard = ({ restaurant }) => {
 
             <Link
               to={`/restaurant/${restaurant.slug}`}
-              className="text-[10px] font-medium border border-outline-variant/20 px-3 py-1.5 transition-colors cursor-pointer text-secondary hover:bg-secondary hover:text-white"
+              className="text-[10px] font-medium border border-[#775a19]/20 px-3 py-1.5 transition-colors cursor-pointer text-secondary hover:bg-[#775a19] hover:text-white"
             >
               ALL SLOTS
             </Link>
