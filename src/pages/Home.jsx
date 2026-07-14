@@ -6,6 +6,7 @@ import CuisineBrowse from "../components/Home/CuisineBrowse";
 import TrendingRow from "../components/Home/TrendingRow";
 import Membership from "../components/Home/Membership";
 import NewsletterCTA from "../components/Home/NewsletterCTA";
+import Footer from "../Footer";
 
 const Home = () => {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
@@ -24,6 +25,7 @@ const Home = () => {
         <Membership/>
         <NewsletterCTA/>
       </main>
+      <Footer/>
     </div>
   );
 };

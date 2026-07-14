@@ -87,3 +87,34 @@ export const restaurants = [
     exclusive: true,
   },
 ];
+
+
+export const socialLinks = [
+    { icon: GlobeIcon, href: "#" },
+    { icon: Share2Icon, href: "#" },
+    { icon: MailIcon, href: "#" },
+];
+
+export const bottomLinks = [
+    { label: "Terms", path: "#" },
+    { label: "Privacy", path: "#" },
+];
+
+export const footerSections = [
+    {
+        title: "COMPANY",
+        links: [
+            { label: "About Us", path: "#" },
+            { label: "Partner with Us", path: "#" },
+            { label: "Careers", path: "#" },
+        ],
+    },
+    {
+        title: "LEGAL",
+        links: [
+            { label: "Terms of Service", path: "#" },
+            { label: "Privacy Policy", path: "#" },
+            { label: "Cookies", path: "#" },
+        ],
+    },
+];
